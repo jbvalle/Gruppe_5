@@ -56,11 +56,12 @@
 * 1. Build Program from root directory
    ```sh
    make build
+   make base-build
    ```
 <hr>
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Usage: Build Targets
 
 * Run Main Program (from root directory)
    ```sh
