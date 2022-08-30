@@ -1,8 +1,8 @@
-\hypertarget{user__interface_8c}{}\doxysection{/home/jvalle/\+Coding/bic02/student\+\_\+seat\+\_\+system/src/user\+\_\+interface.c File Reference}
-\label{user__interface_8c}\index{/home/jvalle/Coding/bic02/student\_seat\_system/src/user\_interface.c@{/home/jvalle/Coding/bic02/student\_seat\_system/src/user\_interface.c}}
+\hypertarget{user__interface_8c}{}\doxysection{/home/strayker/\+Coding/012\+\_\+hwse/gruppe\+\_\+v-\/main/src/user\+\_\+interface.c File Reference}
+\label{user__interface_8c}\index{/home/strayker/Coding/012\_hwse/gruppe\_v-\/main/src/user\_interface.c@{/home/strayker/Coding/012\_hwse/gruppe\_v-\/main/src/user\_interface.c}}
 
 
-Contains G\+TK G\+UI Descriptions and Algorithms for 1. Pattern Generating $\vert$ 2. \mbox{\hyperlink{structStudent}{Student}} ID Input $\vert$ 3. Request Direct/\+Indirect Neighbours.  
+Contains GTK GUI Descriptions and Algorithms for 1. Pattern Generating $\vert$ 2. \mbox{\hyperlink{structStudent}{Student}} ID Input $\vert$ 3. Request Direct/\+Indirect Neighbours.  
 
 
 {\ttfamily \#include \char`\"{}../inc/project\+\_\+function.\+h\char`\"{}}\newline
@@ -21,17 +21,17 @@ void \mbox{\hyperlink{user__interface_8c_a41672910625f8df61341d3be728aebd1}{init
 \mbox{\hyperlink{structClassroom}{Classroom}} $\ast$ \mbox{\hyperlink{user__interface_8c_a282e17e6ffd51d71fc656f20e7aa7c7c}{generate\+\_\+100p\+\_\+coverage\+\_\+pattern}} (\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$classroom, \mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$my\+Widget)
 \begin{DoxyCompactList}\small\item\em Function sets seating pattern to 100\% coverage. \end{DoxyCompactList}\item 
 Gtk\+Widget $\ast$ \mbox{\hyperlink{user__interface_8c_a9e3a7a3e449f52f0395a1c7ed52aa7bd}{create\+\_\+view1}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view)
-\begin{DoxyCompactList}\small\item\em Defines all G\+TK G\+UI Object of 1. window, used for setting coverage and row $\vert$ column adjustment. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Defines all GTK GUI Object of 1. window, used for setting coverage and row $\vert$ column adjustment. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_a66f00e404f7981480aa450d6bf2a12be}{free\+\_\+classroom}} (\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$class)
 \begin{DoxyCompactList}\small\item\em Free allocated memory for classroom datatype. \end{DoxyCompactList}\item 
 Gtk\+Widget $\ast$ \mbox{\hyperlink{user__interface_8c_ae7b23bcb84436f5d6cdf4c5a9c5af79e}{create\+\_\+view2}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view)
-\begin{DoxyCompactList}\small\item\em Defines all G\+TK G\+UI Object of 2. window, used for student ID Input and Generating the final pattern. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Defines all GTK GUI Object of 2. window, used for student ID Input and Generating the final pattern. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{user__interface_8c_aa1783868d4dc508a0b4ba1aafd0df36a}{validate\+\_\+user\+\_\+input}} (\mbox{\hyperlink{structStudentEntry}{Student\+Entry}} $\ast$student\+\_\+entry\+\_\+input, \mbox{\hyperlink{structClassroom}{Classroom}} $\ast$current\+\_\+classroom)
 \begin{DoxyCompactList}\small\item\em If \mbox{\hyperlink{structStudent}{Student}} is requested, check all students, if match is found return Coordinates. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_af9c63a0809d19bd24d1cdc4a2906e3d0}{get\+\_\+student\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
 \begin{DoxyCompactList}\small\item\em Fetching \mbox{\hyperlink{structStudent}{Student}} ID name from entry widget. \end{DoxyCompactList}\item 
 Gtk\+Widget $\ast$ \mbox{\hyperlink{user__interface_8c_a239a91e077c5b95f6f4929e37d93dedb}{create\+\_\+view3}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view)
-\begin{DoxyCompactList}\small\item\em Defines all G\+TK G\+UI Object of 3. window, used for displaying generated pattern. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Defines all GTK GUI Object of 3. window, used for displaying generated pattern. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_aeca7242b41c33a253c221e0ad854609d}{create\+\_\+view4}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view, \mbox{\hyperlink{structStudentEntry}{Student\+Entry}} $\ast$current\+\_\+\+Student\+Entry)
 \begin{DoxyCompactList}\small\item\em Popup window for displaying direct and indirect Neighbours. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_a44a406b1e1df8caf4debbd6640417da8}{change\+\_\+view}} (Gtk\+Widget $\ast$button, gpointer data)
@@ -47,13 +47,11 @@ void \mbox{\hyperlink{user__interface_8c_aed6032be7269e0015be13dd78f30b62c}{get\
 void \mbox{\hyperlink{user__interface_8c_af7ccc9fb970b1f2c80fb826cd5a8fde3}{get\+\_\+row\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
 \begin{DoxyCompactList}\small\item\em Fetch requested total rows. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_abd47f284195376a854eac3991b59fa9b}{get\+\_\+student\+\_\+name\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
-\begin{DoxyCompactList}\small\item\em Fetches all student ID typed in by the user. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{user__interface_8c_a20cb7d45d633e9f37b357ee86a67d938}{gtk\+\_\+gui\+\_\+main}} (int argc, char $\ast$$\ast$argv)
-\begin{DoxyCompactList}\small\item\em Loads first Window for user interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fetches all student ID typed in by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Contains G\+TK G\+UI Descriptions and Algorithms for 1. Pattern Generating $\vert$ 2. \mbox{\hyperlink{structStudent}{Student}} ID Input $\vert$ 3. Request Direct/\+Indirect Neighbours. 
+Contains GTK GUI Descriptions and Algorithms for 1. Pattern Generating $\vert$ 2. \mbox{\hyperlink{structStudent}{Student}} ID Input $\vert$ 3. Request Direct/\+Indirect Neighbours. 
 
 
 
@@ -100,13 +98,13 @@ Converts gchar type to gint type -\/$>$ used for entries which contains numbers.
 
 
 
-Defines all G\+TK G\+UI Object of 1. window, used for setting coverage and row $\vert$ column adjustment. 
+Defines all GTK GUI Object of 1. window, used for setting coverage and row $\vert$ column adjustment. 
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em view} & Input a widget of same datatype, manipulates My\+Widget Attributes for first Window \\
 \hline
-\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized G\+TK Objects \\
+\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized GTK Objects \\
 \hline
 \end{DoxyParams}
 
@@ -123,20 +121,20 @@ Defines all G\+TK G\+UI Object of 1. window, used for setting coverage and row $
 
 
 
-Defines all G\+TK G\+UI Object of 2. window, used for student ID Input and Generating the final pattern. 
+Defines all GTK GUI Object of 2. window, used for student ID Input and Generating the final pattern. 
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em view} & Input a widget of same datatype, manipulates My\+Widget Attributes for second window \\
 \hline
-\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized G\+TK Objects \\
+\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized GTK Objects \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyEnumerate}
 \item Initialize Rows and Columns for default set up in case no row $\vert$ cols input has been made in 1. Window
 \item Initialize \mbox{\hyperlink{structClassroom}{Classroom}} Dataype -\/$>$ allocates memory for student datatype
-\item Initialize G\+UI Objects of second window
+\item Initialize GUI Objects of second window
 \item Implement Error Handling
 \item Initialize horizontal box containers
 \item Assign Icon of Seating position depending if occupied
@@ -153,22 +151,22 @@ Defines all G\+TK G\+UI Object of 2. window, used for student ID Input and Gener
 
 
 
-Defines all G\+TK G\+UI Object of 3. window, used for displaying generated pattern. 
+Defines all GTK GUI Object of 3. window, used for displaying generated pattern. 
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em view} & Input a widget of same datatype, manipulates My\+Widget Attributes for first Window \\
 \hline
-\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized G\+TK Objects \\
+\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized GTK Objects \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyEnumerate}
-\item Allocate G\+TK Objects for displaying window
+\item Allocate GTK Objects for displaying window
 \item Assign Function call for fetching student ID name from entered entry widget
 \item Implement Error Handling
 \item Allocate Box containers for gui objects
-\item Assign student I\+Ds to labels and icons to seat position
+\item Assign student IDs to labels and icons to seat position
 \item Add add objects to main containers of window
 \item Return generated window
 \end{DoxyEnumerate}\mbox{\Hypertarget{user__interface_8c_aeca7242b41c33a253c221e0ad854609d}\label{user__interface_8c_aeca7242b41c33a253c221e0ad854609d}} 
@@ -317,22 +315,7 @@ Fetches all student ID typed in by the user.
 \mbox{\texttt{ in}}  & {\em data} & containing all typed in values of user \\
 \hline
 \end{DoxyParams}
-Itterate through all Seats and fetch student ID if available\mbox{\Hypertarget{user__interface_8c_a20cb7d45d633e9f37b357ee86a67d938}\label{user__interface_8c_a20cb7d45d633e9f37b357ee86a67d938}} 
-\index{user\_interface.c@{user\_interface.c}!gtk\_gui\_main@{gtk\_gui\_main}}
-\index{gtk\_gui\_main@{gtk\_gui\_main}!user\_interface.c@{user\_interface.c}}
-\doxysubsubsection{\texorpdfstring{gtk\_gui\_main()}{gtk\_gui\_main()}}
-{\footnotesize\ttfamily int gtk\+\_\+gui\+\_\+main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
-
-
-
-Loads first Window for user interaction. 
-
-
-\begin{DoxyEnumerate}
-\item Allocate G\+UI Objects for first window
-\item Assign Process termination if window is closed
-\item Load first window view1 into frame for user interaction
-\end{DoxyEnumerate}\mbox{\Hypertarget{user__interface_8c_a41672910625f8df61341d3be728aebd1}\label{user__interface_8c_a41672910625f8df61341d3be728aebd1}} 
+Itterate through all Seats and fetch student ID if available\mbox{\Hypertarget{user__interface_8c_a41672910625f8df61341d3be728aebd1}\label{user__interface_8c_a41672910625f8df61341d3be728aebd1}} 
 \index{user\_interface.c@{user\_interface.c}!init\_classroom@{init\_classroom}}
 \index{init\_classroom@{init\_classroom}!user\_interface.c@{user\_interface.c}}
 \doxysubsubsection{\texorpdfstring{init\_classroom()}{init\_classroom()}}

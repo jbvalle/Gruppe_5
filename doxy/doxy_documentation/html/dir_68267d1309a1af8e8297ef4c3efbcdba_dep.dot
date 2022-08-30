@@ -1,4 +1,4 @@
-digraph "/home/jvalle/Coding/bic02/student_seat_system/src" {
+digraph "/home/strayker/Coding/012_hwse/gruppe_v-main/src" {
   compound=true
   node [ fontsize="10", fontname="Helvetica"];
   edge [ labelfontsize="10", labelfontname="Helvetica"];
