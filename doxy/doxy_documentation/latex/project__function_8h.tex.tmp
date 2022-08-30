@@ -1,0 +1,417 @@
+\hypertarget{project__function_8h}{}\doxysection{/home/jvalle/\+Coding/bic02/student\+\_\+seat\+\_\+system/inc/project\+\_\+function.h File Reference}
+\label{project__function_8h}\index{/home/jvalle/Coding/bic02/student\_seat\_system/inc/project\_function.h@{/home/jvalle/Coding/bic02/student\_seat\_system/inc/project\_function.h}}
+
+
+Contains all structs and prototypes of implemented functions.  
+
+
+{\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for project\+\_\+function.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCell}{Cell}}
+\item 
+struct \mbox{\hyperlink{structStudent}{Student}}
+\item 
+struct \mbox{\hyperlink{structClassroom}{Classroom}}
+\item 
+struct \mbox{\hyperlink{structStudentEntry}{Student\+Entry}}
+\item 
+struct \mbox{\hyperlink{structWidget}{Widget}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{project__function_8h_a8ff1915f6ec878601e03909c260ba53c}\label{project__function_8h_a8ff1915f6ec878601e03909c260ba53c}} 
+\#define {\bfseries R\+O\+W\+S\+\_\+\+D\+E\+F\+A\+U\+LT}~4
+\item 
+\mbox{\Hypertarget{project__function_8h_a9418a6eb884ca65464a9e6f24816e625}\label{project__function_8h_a9418a6eb884ca65464a9e6f24816e625}} 
+\#define {\bfseries C\+O\+L\+S\+\_\+\+D\+E\+F\+A\+U\+LT}~4
+\item 
+\mbox{\Hypertarget{project__function_8h_a14541fb6ab63e37577b70673f6cadf5a}\label{project__function_8h_a14541fb6ab63e37577b70673f6cadf5a}} 
+\#define {\bfseries M\+A\+X\+\_\+\+S\+E\+A\+T\+S\+\_\+\+C\+O\+U\+NT}~R\+O\+W\+S\+\_\+\+D\+E\+F\+A\+U\+LT$\ast$C\+O\+L\+S\+\_\+\+D\+E\+F\+A\+U\+LT
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structCell}{Cell}} \mbox{\hyperlink{project__function_8h_a60bf09598e66928bf67a21a22bc17814}{Cell}}
+\item 
+typedef struct \mbox{\hyperlink{structStudent}{Student}} \mbox{\hyperlink{project__function_8h_aff023d1622323fea0afaedb5f89cc0e0}{Student}}
+\item 
+typedef struct \mbox{\hyperlink{structClassroom}{Classroom}} \mbox{\hyperlink{project__function_8h_a006e9167c9a1b0ccf0eda2b71a94596e}{Classroom}}
+\item 
+typedef struct \mbox{\hyperlink{structStudentEntry}{Student\+Entry}} \mbox{\hyperlink{project__function_8h_af9bed2929d1bf9fbd96cdd255eae680e}{Student\+Entry}}
+\item 
+typedef struct \mbox{\hyperlink{structWidget}{Widget}} \mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{project__function_8h_a9e3a7a3e449f52f0395a1c7ed52aa7bd}{create\+\_\+view1}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view)
+\begin{DoxyCompactList}\small\item\em Defines all G\+TK G\+UI Object of 1. window, used for setting coverage and row $\vert$ column adjustment. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{project__function_8h_ae7b23bcb84436f5d6cdf4c5a9c5af79e}{create\+\_\+view2}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view)
+\begin{DoxyCompactList}\small\item\em Defines all G\+TK G\+UI Object of 2. window, used for student ID Input and Generating the final pattern. \end{DoxyCompactList}\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{project__function_8h_a239a91e077c5b95f6f4929e37d93dedb}{create\+\_\+view3}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view)
+\begin{DoxyCompactList}\small\item\em Defines all G\+TK G\+UI Object of 3. window, used for displaying generated pattern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{project__function_8h_aeca7242b41c33a253c221e0ad854609d}{create\+\_\+view4}} (\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$view, \mbox{\hyperlink{structStudentEntry}{Student\+Entry}} $\ast$current\+\_\+\+Student\+Entry)
+\begin{DoxyCompactList}\small\item\em Popup window for displaying direct and indirect Neighbours. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{project__function_8h_a44a406b1e1df8caf4debbd6640417da8}{change\+\_\+view}} (Gtk\+Widget $\ast$button, gpointer data)
+\begin{DoxyCompactList}\small\item\em Changes current window depending on user request, current window container is replaced with requested window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{project__function_8h_a2afc665e3803ab3f06391bfebe113748}{radio\+\_\+button\+\_\+selected}} (Gtk\+Widget $\ast$button, gpointer data)
+\begin{DoxyCompactList}\small\item\em Changes user\+\_\+choice Variable depeneding on coverage requested by clicking radiobutton. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{project__function_8h_aed6032be7269e0015be13dd78f30b62c}\label{project__function_8h_aed6032be7269e0015be13dd78f30b62c}} 
+void \mbox{\hyperlink{project__function_8h_aed6032be7269e0015be13dd78f30b62c}{get\+\_\+col\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
+\begin{DoxyCompactList}\small\item\em Fetch requested total columns. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{project__function_8h_af7ccc9fb970b1f2c80fb826cd5a8fde3}\label{project__function_8h_af7ccc9fb970b1f2c80fb826cd5a8fde3}} 
+void \mbox{\hyperlink{project__function_8h_af7ccc9fb970b1f2c80fb826cd5a8fde3}{get\+\_\+row\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
+\begin{DoxyCompactList}\small\item\em Fetch requested total rows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{project__function_8h_abd47f284195376a854eac3991b59fa9b}{get\+\_\+student\+\_\+name\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
+\begin{DoxyCompactList}\small\item\em Fetches all student ID typed in by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{project__function_8h_af9c63a0809d19bd24d1cdc4a2906e3d0}{get\+\_\+student\+\_\+entry\+\_\+input}} (Gtk\+Widget $\ast$button, gpointer data)
+\begin{DoxyCompactList}\small\item\em Fetching \mbox{\hyperlink{structStudent}{Student}} ID name from entry widget. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{project__function_8h_aa1783868d4dc508a0b4ba1aafd0df36a}{validate\+\_\+user\+\_\+input}} (\mbox{\hyperlink{structStudentEntry}{Student\+Entry}} $\ast$student\+\_\+entry\+\_\+input, \mbox{\hyperlink{structClassroom}{Classroom}} $\ast$current\+\_\+classroom)
+\begin{DoxyCompactList}\small\item\em If \mbox{\hyperlink{structStudent}{Student}} is requested, check all students, if match is found return Coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{project__function_8h_a6c3a3e0a0f1b90b922581edeab178d9c}\label{project__function_8h_a6c3a3e0a0f1b90b922581edeab178d9c}} 
+void {\bfseries get\+\_\+direct\+\_\+neighbour} ()
+\item 
+\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$ \mbox{\hyperlink{project__function_8h_a94f7706095bd5f8259e3d132e1d62ce2}{generate\+\_\+25p\+\_\+coverage\+\_\+pattern}} (\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$classroom, \mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$my\+Widget)
+\begin{DoxyCompactList}\small\item\em Function sets seating pattern to 25\% coverage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$ \mbox{\hyperlink{project__function_8h_a63f31e62cbfe3669dcce8f5bfb15ea34}{generate\+\_\+50p\+\_\+coverage\+\_\+pattern}} (\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$classroom, \mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$my\+Widget)
+\begin{DoxyCompactList}\small\item\em Function sets seating pattern to 50\% coverage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$ \mbox{\hyperlink{project__function_8h_a282e17e6ffd51d71fc656f20e7aa7c7c}{generate\+\_\+100p\+\_\+coverage\+\_\+pattern}} (\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$classroom, \mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$my\+Widget)
+\begin{DoxyCompactList}\small\item\em Function sets seating pattern to 100\% coverage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{project__function_8h_a20cb7d45d633e9f37b357ee86a67d938}{gtk\+\_\+gui\+\_\+main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Loads first Window for user interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{project__function_8h_a68ebe2962f422850705926c2f1353f65}\label{project__function_8h_a68ebe2962f422850705926c2f1353f65}} 
+\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$ {\bfseries widget}
+\item 
+\mbox{\Hypertarget{project__function_8h_a0ca0408094e187b18187798d274a6529}\label{project__function_8h_a0ca0408094e187b18187798d274a6529}} 
+\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$ {\bfseries classroom}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all structs and prototypes of implemented functions. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{project__function_8h_a60bf09598e66928bf67a21a22bc17814}\label{project__function_8h_a60bf09598e66928bf67a21a22bc17814}} 
+\index{project\_function.h@{project\_function.h}!Cell@{Cell}}
+\index{Cell@{Cell}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{Cell}{Cell}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structCell}{Cell}} \mbox{\hyperlink{structCell}{Cell}}}
+
+Saves \mbox{\hyperlink{structStudent}{Student}} Coordinates \mbox{\Hypertarget{project__function_8h_a006e9167c9a1b0ccf0eda2b71a94596e}\label{project__function_8h_a006e9167c9a1b0ccf0eda2b71a94596e}} 
+\index{project\_function.h@{project\_function.h}!Classroom@{Classroom}}
+\index{Classroom@{Classroom}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{Classroom}{Classroom}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structClassroom}{Classroom}} \mbox{\hyperlink{structClassroom}{Classroom}}}
+
+Containes an array of students and its total number \mbox{\Hypertarget{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}\label{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}} 
+\index{project\_function.h@{project\_function.h}!MyWidget@{MyWidget}}
+\index{MyWidget@{MyWidget}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{MyWidget}{MyWidget}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structWidget}{Widget}} \mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}}}
+
+Contains all windows and its gui objects as well as all its variables \mbox{\Hypertarget{project__function_8h_aff023d1622323fea0afaedb5f89cc0e0}\label{project__function_8h_aff023d1622323fea0afaedb5f89cc0e0}} 
+\index{project\_function.h@{project\_function.h}!Student@{Student}}
+\index{Student@{Student}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{Student}{Student}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structStudent}{Student}} \mbox{\hyperlink{structStudent}{Student}}}
+
+Containes all students names, occupied seats and coordinates \mbox{\Hypertarget{project__function_8h_af9bed2929d1bf9fbd96cdd255eae680e}\label{project__function_8h_af9bed2929d1bf9fbd96cdd255eae680e}} 
+\index{project\_function.h@{project\_function.h}!StudentEntry@{StudentEntry}}
+\index{StudentEntry@{StudentEntry}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{StudentEntry}{StudentEntry}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structStudentEntry}{Student\+Entry}} \mbox{\hyperlink{structStudentEntry}{Student\+Entry}}}
+
+Contains user input of student ID -\/$>$ is used for fetching entry and saving direct and indirect Neighbours 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{project__function_8h_a44a406b1e1df8caf4debbd6640417da8}\label{project__function_8h_a44a406b1e1df8caf4debbd6640417da8}} 
+\index{project\_function.h@{project\_function.h}!change\_view@{change\_view}}
+\index{change\_view@{change\_view}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{change\_view()}{change\_view()}}
+{\footnotesize\ttfamily void change\+\_\+view (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{button,  }\item[{gpointer}]{data }\end{DoxyParamCaption})}
+
+
+
+Changes current window depending on user request, current window container is replaced with requested window. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em button} & Function call initialized if button pressed \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Contains the users window request \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{project__function_8h_a9e3a7a3e449f52f0395a1c7ed52aa7bd}\label{project__function_8h_a9e3a7a3e449f52f0395a1c7ed52aa7bd}} 
+\index{project\_function.h@{project\_function.h}!create\_view1@{create\_view1}}
+\index{create\_view1@{create\_view1}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{create\_view1()}{create\_view1()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ create\+\_\+view1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{view }\end{DoxyParamCaption})}
+
+
+
+Defines all G\+TK G\+UI Object of 1. window, used for setting coverage and row $\vert$ column adjustment. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em view} & Input a widget of same datatype, manipulates My\+Widget Attributes for first Window \\
+\hline
+\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized G\+TK Objects \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Initialize all Gtk\+Widget Object for 1. window
+\item Define function calls for clicked Button
+\item Add all initialized Gtk\+Widgets to container of first window
+\item Return Gtk\+Widget Window containing all objects and functioncall of first window
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_ae7b23bcb84436f5d6cdf4c5a9c5af79e}\label{project__function_8h_ae7b23bcb84436f5d6cdf4c5a9c5af79e}} 
+\index{project\_function.h@{project\_function.h}!create\_view2@{create\_view2}}
+\index{create\_view2@{create\_view2}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{create\_view2()}{create\_view2()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ create\+\_\+view2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{view }\end{DoxyParamCaption})}
+
+
+
+Defines all G\+TK G\+UI Object of 2. window, used for student ID Input and Generating the final pattern. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em view} & Input a widget of same datatype, manipulates My\+Widget Attributes for second window \\
+\hline
+\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized G\+TK Objects \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Initialize Rows and Columns for default set up in case no row $\vert$ cols input has been made in 1. Window
+\item Initialize \mbox{\hyperlink{structClassroom}{Classroom}} Dataype -\/$>$ allocates memory for student datatype
+\item Initialize G\+UI Objects of second window
+\item Implement Error Handling
+\item Initialize horizontal box containers
+\item Assign Icon of Seating position depending if occupied
+\item Add the icons to the gtk containers
+\item Add all boxes to vertical container
+\item Define Function calls $\vert$ save\+\_\+button -\/$>$ call 3. Window $\vert$ return\+\_\+button -\/$>$ call 1. Window
+\item Add all objects to main containers
+\item Return generated window
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_a239a91e077c5b95f6f4929e37d93dedb}\label{project__function_8h_a239a91e077c5b95f6f4929e37d93dedb}} 
+\index{project\_function.h@{project\_function.h}!create\_view3@{create\_view3}}
+\index{create\_view3@{create\_view3}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{create\_view3()}{create\_view3()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ create\+\_\+view3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{view }\end{DoxyParamCaption})}
+
+
+
+Defines all G\+TK G\+UI Object of 3. window, used for displaying generated pattern. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em view} & Input a widget of same datatype, manipulates My\+Widget Attributes for first Window \\
+\hline
+\mbox{\texttt{ out}}  & {\em window} & Outputs new window containing initialized G\+TK Objects \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Allocate G\+TK Objects for displaying window
+\item Assign Function call for fetching student ID name from entered entry widget
+\item Implement Error Handling
+\item Allocate Box containers for gui objects
+\item Assign student I\+Ds to labels and icons to seat position
+\item Add add objects to main containers of window
+\item Return generated window
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_aeca7242b41c33a253c221e0ad854609d}\label{project__function_8h_aeca7242b41c33a253c221e0ad854609d}} 
+\index{project\_function.h@{project\_function.h}!create\_view4@{create\_view4}}
+\index{create\_view4@{create\_view4}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{create\_view4()}{create\_view4()}}
+{\footnotesize\ttfamily void create\+\_\+view4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{view,  }\item[{\mbox{\hyperlink{structStudentEntry}{Student\+Entry}} $\ast$}]{current\+\_\+\+Student\+Entry }\end{DoxyParamCaption})}
+
+
+
+Popup window for displaying direct and indirect Neighbours. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em view} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+\+Student\+Entry} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Initialize containers nad variables for Neighbour variable
+\item Check if requested student ID exists if not return Error Message
+\item Fetch if within boundaries, the names of direct indirect Neighbours and assign to label and add to container
+\item Direct Neighbour\+: Fetch \mbox{\hyperlink{structStudent}{Student}} ID depending on relative position -\/$>$ Create Label -\/$>$ Stack on container
+\item Indirect Neighbour\+: Fetch \mbox{\hyperlink{structStudent}{Student}} ID depending on relative position -\/$>$ Create Label -\/$>$ Stack on container
+\item Add all boxes to main container of window
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_a282e17e6ffd51d71fc656f20e7aa7c7c}\label{project__function_8h_a282e17e6ffd51d71fc656f20e7aa7c7c}} 
+\index{project\_function.h@{project\_function.h}!generate\_100p\_coverage\_pattern@{generate\_100p\_coverage\_pattern}}
+\index{generate\_100p\_coverage\_pattern@{generate\_100p\_coverage\_pattern}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{generate\_100p\_coverage\_pattern()}{generate\_100p\_coverage\_pattern()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structClassroom}{Classroom}}$\ast$ generate\+\_\+100p\+\_\+coverage\+\_\+pattern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$}]{classroom,  }\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{my\+Widget }\end{DoxyParamCaption})}
+
+
+
+Function sets seating pattern to 100\% coverage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em classroom} & datatype containing all students\textquotesingle{} ID $\vert$ Seating $\vert$ Coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em my\+Widget} & datatype containing all windows and gui objectst, used to access and change seating \\
+\hline
+\mbox{\texttt{ out}}  & {\em classroom} & returns datatype with changed positions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Run through every position and set all as occupied
+\item Return classroom type containing new seating order
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_a94f7706095bd5f8259e3d132e1d62ce2}\label{project__function_8h_a94f7706095bd5f8259e3d132e1d62ce2}} 
+\index{project\_function.h@{project\_function.h}!generate\_25p\_coverage\_pattern@{generate\_25p\_coverage\_pattern}}
+\index{generate\_25p\_coverage\_pattern@{generate\_25p\_coverage\_pattern}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{generate\_25p\_coverage\_pattern()}{generate\_25p\_coverage\_pattern()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structClassroom}{Classroom}}$\ast$ generate\+\_\+25p\+\_\+coverage\+\_\+pattern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$}]{classroom,  }\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{my\+Widget }\end{DoxyParamCaption})}
+
+
+
+Function sets seating pattern to 25\% coverage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em classroom} & datatype containing all students\textquotesingle{}\textquotesingle{} ID $\vert$ Seating $\vert$ Coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em my\+Widget} & datatype containing all windows and gui objectst, used to access and change seating \\
+\hline
+\mbox{\texttt{ out}}  & {\em classroom} & returns datatype with changed positions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Initialize total number of students
+\item Initialize all seating positions as not occupied
+\item Concurrently change seating to occupied according to 25\% Seating Cov Algorithm
+\item Return classroom type containing new seating order
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_a63f31e62cbfe3669dcce8f5bfb15ea34}\label{project__function_8h_a63f31e62cbfe3669dcce8f5bfb15ea34}} 
+\index{project\_function.h@{project\_function.h}!generate\_50p\_coverage\_pattern@{generate\_50p\_coverage\_pattern}}
+\index{generate\_50p\_coverage\_pattern@{generate\_50p\_coverage\_pattern}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{generate\_50p\_coverage\_pattern()}{generate\_50p\_coverage\_pattern()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structClassroom}{Classroom}}$\ast$ generate\+\_\+50p\+\_\+coverage\+\_\+pattern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$}]{classroom,  }\item[{\mbox{\hyperlink{project__function_8h_a252a1f9d0ba05cce4c5a62440b69b365}{My\+Widget}} $\ast$}]{my\+Widget }\end{DoxyParamCaption})}
+
+
+
+Function sets seating pattern to 50\% coverage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em classroom} & datatype containing all students\textquotesingle{} ID $\vert$ Seating $\vert$ Coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em my\+Widget} & datatype containing all windows and gui objectst, used to access and change seating \\
+\hline
+\mbox{\texttt{ out}}  & {\em classroom} & returns datatype with changed positions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item Initialize a boolean variable for toggling
+\item Run through all seats, while toggling the seating state
+\item Return classroom type containing new seating order
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_af9c63a0809d19bd24d1cdc4a2906e3d0}\label{project__function_8h_af9c63a0809d19bd24d1cdc4a2906e3d0}} 
+\index{project\_function.h@{project\_function.h}!get\_student\_entry\_input@{get\_student\_entry\_input}}
+\index{get\_student\_entry\_input@{get\_student\_entry\_input}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{get\_student\_entry\_input()}{get\_student\_entry\_input()}}
+{\footnotesize\ttfamily void get\+\_\+student\+\_\+entry\+\_\+input (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{button,  }\item[{gpointer}]{data }\end{DoxyParamCaption})}
+
+
+
+Fetching \mbox{\hyperlink{structStudent}{Student}} ID name from entry widget. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em button} & Function call initialized if button pressed \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & gpointer type variable -\/$>$ \mbox{\hyperlink{structStudentEntry}{Student\+Entry}} Variable used for overwriting datasets with fetched student ID \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{project__function_8h_abd47f284195376a854eac3991b59fa9b}\label{project__function_8h_abd47f284195376a854eac3991b59fa9b}} 
+\index{project\_function.h@{project\_function.h}!get\_student\_name\_entry\_input@{get\_student\_name\_entry\_input}}
+\index{get\_student\_name\_entry\_input@{get\_student\_name\_entry\_input}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{get\_student\_name\_entry\_input()}{get\_student\_name\_entry\_input()}}
+{\footnotesize\ttfamily void get\+\_\+student\+\_\+name\+\_\+entry\+\_\+input (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{button,  }\item[{gpointer}]{data }\end{DoxyParamCaption})}
+
+
+
+Fetches all student ID typed in by the user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em button} & Function call initialized if button pressed \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & containing all typed in values of user \\
+\hline
+\end{DoxyParams}
+Itterate through all Seats and fetch student ID if available\mbox{\Hypertarget{project__function_8h_a20cb7d45d633e9f37b357ee86a67d938}\label{project__function_8h_a20cb7d45d633e9f37b357ee86a67d938}} 
+\index{project\_function.h@{project\_function.h}!gtk\_gui\_main@{gtk\_gui\_main}}
+\index{gtk\_gui\_main@{gtk\_gui\_main}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{gtk\_gui\_main()}{gtk\_gui\_main()}}
+{\footnotesize\ttfamily int gtk\+\_\+gui\+\_\+main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Loads first Window for user interaction. 
+
+
+\begin{DoxyEnumerate}
+\item Allocate G\+UI Objects for first window
+\item Assign Process termination if window is closed
+\item Load first window view1 into frame for user interaction
+\end{DoxyEnumerate}\mbox{\Hypertarget{project__function_8h_a2afc665e3803ab3f06391bfebe113748}\label{project__function_8h_a2afc665e3803ab3f06391bfebe113748}} 
+\index{project\_function.h@{project\_function.h}!radio\_button\_selected@{radio\_button\_selected}}
+\index{radio\_button\_selected@{radio\_button\_selected}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{radio\_button\_selected()}{radio\_button\_selected()}}
+{\footnotesize\ttfamily void radio\+\_\+button\+\_\+selected (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{button,  }\item[{gpointer}]{data }\end{DoxyParamCaption})}
+
+
+
+Changes user\+\_\+choice Variable depeneding on coverage requested by clicking radiobutton. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em button} & Function call initlized if button pressed \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Is the current radiobutton value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{project__function_8h_aa1783868d4dc508a0b4ba1aafd0df36a}\label{project__function_8h_aa1783868d4dc508a0b4ba1aafd0df36a}} 
+\index{project\_function.h@{project\_function.h}!validate\_user\_input@{validate\_user\_input}}
+\index{validate\_user\_input@{validate\_user\_input}!project\_function.h@{project\_function.h}}
+\doxysubsubsection{\texorpdfstring{validate\_user\_input()}{validate\_user\_input()}}
+{\footnotesize\ttfamily bool validate\+\_\+user\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStudentEntry}{Student\+Entry}} $\ast$}]{student\+\_\+entry\+\_\+input,  }\item[{\mbox{\hyperlink{structClassroom}{Classroom}} $\ast$}]{current\+\_\+classroom }\end{DoxyParamCaption})}
+
+
+
+If \mbox{\hyperlink{structStudent}{Student}} is requested, check all students, if match is found return Coordinates. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em student\+\_\+entry\+\_\+input} & Used for \mbox{\hyperlink{structStudent}{Student}} ID checking and saving Neighbours \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+classroom} & Used for Assign student coordinates if student ID match occurs after a request \\
+\hline
+\mbox{\texttt{ out}}  & {\em boolean} & true/false if match was found \\
+\hline
+\end{DoxyParams}

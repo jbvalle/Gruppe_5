@@ -1,0 +1,308 @@
+
+
+~\newline
+
+
+
+
+
+
+{\itshape This project reads and saves a textfile in a generated hashtable and censores words depending on requested user input.} ~\newline
+ ~\newline
+
+
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_mainpage_autotoc_md0}{}\doxysubsection{About The Project}\label{md_mainpage_autotoc_md0}
+{\bfseries{1 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Open a text file and read the text row by row.~\newline
+
+\item Separate words by these characters (\char`\"{} \char`\"{}, \char`\"{}.\char`\"{}, \char`\"{}\textbackslash{}n\char`\"{})~\newline
+
+\item Store the values in a hashtable using dynamic linked lists.~\newline
+
+\item Use the sum of character values as value to be hashed. E.\+g. Cat = (67+97+116) \% 23~\newline
+
+\item Words shall be stored in dynamically allocated memory~\newline
+
+\item Print out the hash in a readable way. E.\+g. max 10 words per row.~\newline
+
+\end{DoxyItemize}
+
+{\bfseries{2 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item The occurrence of words shall be counted instead of multiple entries in the list. ~\newline
+
+\item Add additional word separators\+:~\newline
+
+\item semicolon (;) ~\newline
+
+\item colon (\+:)~\newline
+
+\item comma (,)~\newline
+
+\item question mark (?)~\newline
+
+\item tab (\textbackslash{}t)~\newline
+
+\end{DoxyItemize}
+
+{\bfseries{3 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item The lists shall always retain alphabetic order.
+\end{DoxyItemize}
+
+{\bfseries{4 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Give the user a choice to select one bucket to output separately.
+\item Print out the entries in the Bucket.
+\item Let the user select one or more buckets and remove all words from the text which do not match to these selected buckets and write it to a new text file.
+\end{DoxyItemize}
+
+{\bfseries{5 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Let the user select one or more buckets and censor all words from the text which match to these selected buckets and write it to a new text file.
+\item All word separators shall be copied to the new file in the correct places.
+\end{DoxyItemize}
+
+{\bfseries{6 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Store the hash in a binary file
+\item Read and populate the hash from a file and append/count new words into it when the user wants to do this.
+\end{DoxyItemize}
+
+{\bfseries{7 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item The program arguments are handled by getopt(3).
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_mainpage_autotoc_md1}{}\doxysubsection{Getting Started}\label{md_mainpage_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Start by generating Binary file\+: Follow Installation instruction
+\end{DoxyItemize}\hypertarget{md_mainpage_autotoc_md2}{}\doxysubsubsection{Installation}\label{md_mainpage_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Generate Binary File \char`\"{}./hashcount\char`\"{} by executing make in src/ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_mainpage_autotoc_md3}{}\doxysubsection{Usage}\label{md_mainpage_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Hashcount is able to generate Hashtable from any file index requested
+\item If no input text is explicitly mentioned in argument a default text file in T\+E\+X\+T\+F\+I\+L\+E\+S/default.\+txt is used
+\item The User is able to choose different options
+\item Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./hashcount -\/f input.txt -\/rc}
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ O\+P\+T\+I\+O\+NS }&\cellcolor{\tableheadbgcolor}\textbf{ D\+E\+S\+C\+R\+I\+P\+T\+I\+ON  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ O\+P\+T\+I\+O\+NS }&\cellcolor{\tableheadbgcolor}\textbf{ D\+E\+S\+C\+R\+I\+P\+T\+I\+ON  }\\\cline{1-2}
+\endhead
+\cellcolor{\tableheadbgcolor}\textbf{ -\/f path\+\_\+rel\+\_\+to\+\_\+bin/filename.\+txt }&\cellcolor{\tableheadbgcolor}\textbf{ For specifying an input file declare a file name after the -\/f option i.\+e. -\/f input.\+txt  }\\\cline{1-2}
+\cellcolor{\tableheadbgcolor}\textbf{ -\/r }&\cellcolor{\tableheadbgcolor}\textbf{ This removes all keywords from a textfile by a chosen bucket. This requires no arguments.  }\\\cline{1-2}
+\cellcolor{\tableheadbgcolor}\textbf{ -\/c }&\cellcolor{\tableheadbgcolor}\textbf{ This censores all words except chosen buckets. This requires no arguments  }\\\cline{1-2}
+\end{longtabu}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_mainpage_autotoc_md4}{}\doxysubsection{Example}\label{md_mainpage_autotoc_md4}
+
+\begin{DoxyItemize}
+\item These examples serve as illustrations how this application could be run
+\item For inputting indices for removing and censoring words spaces or comma could be used 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./hashcount -\/f input.txt -\/rc}
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+ 
+
+\DoxyHorRuler{0}
+ ~\newline
+\hypertarget{md_mainpage_autotoc_md5}{}\doxysubsection{Contact}\label{md_mainpage_autotoc_md5}
+Author\+: John Bryan Valle Email\+: \href{mailto:jbvalle.jv@gmail.com}{\texttt{ jbvalle.\+jv@gmail.\+com}} Date\+: 21.\+01.\+2022 
+
+~\newline
+
+
+
+
+
+
+{\itshape This project reads and saves a textfile in a generated hashtable and censores words depending on requested user input.} ~\newline
+ ~\newline
+
+
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_mainpage_autotoc_md6}{}\doxysubsection{About The Project}\label{md_mainpage_autotoc_md6}
+{\bfseries{1 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Open a text file and read the text row by row.~\newline
+
+\item Separate words by these characters (\char`\"{} \char`\"{}, \char`\"{}.\char`\"{}, \char`\"{}\textbackslash{}n\char`\"{})~\newline
+
+\item Store the values in a hashtable using dynamic linked lists.~\newline
+
+\item Use the sum of character values as value to be hashed. E.\+g. Cat = (67+97+116) \% 23~\newline
+
+\item Words shall be stored in dynamically allocated memory~\newline
+
+\item Print out the hash in a readable way. E.\+g. max 10 words per row.~\newline
+
+\end{DoxyItemize}
+
+{\bfseries{2 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item The occurrence of words shall be counted instead of multiple entries in the list. ~\newline
+
+\item Add additional word separators\+:~\newline
+
+\item semicolon (;) ~\newline
+
+\item colon (\+:)~\newline
+
+\item comma (,)~\newline
+
+\item question mark (?)~\newline
+
+\item tab (\textbackslash{}t)~\newline
+
+\end{DoxyItemize}
+
+{\bfseries{3 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item The lists shall always retain alphabetic order.
+\end{DoxyItemize}
+
+{\bfseries{4 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Give the user a choice to select one bucket to output separately.
+\item Print out the entries in the Bucket.
+\item Let the user select one or more buckets and remove all words from the text which do not match to these selected buckets and write it to a new text file.
+\end{DoxyItemize}
+
+{\bfseries{5 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Let the user select one or more buckets and censor all words from the text which match to these selected buckets and write it to a new text file.
+\item All word separators shall be copied to the new file in the correct places.
+\end{DoxyItemize}
+
+{\bfseries{6 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item Store the hash in a binary file
+\item Read and populate the hash from a file and append/count new words into it when the user wants to do this.
+\end{DoxyItemize}
+
+{\bfseries{7 Part\+: (S\+O\+L\+V\+ED)~\newline
+}}
+\begin{DoxyItemize}
+\item The program arguments are handled by getopt(3).
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_mainpage_autotoc_md7}{}\doxysubsection{Getting Started}\label{md_mainpage_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Start by generating Binary file\+: Follow Installation instruction
+\end{DoxyItemize}\hypertarget{md_mainpage_autotoc_md8}{}\doxysubsubsection{Installation}\label{md_mainpage_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Generate Binary File \char`\"{}./hashcount\char`\"{} by executing make in src/ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\begin{DoxyVerb}     <hr>
+
+     <!-- USAGE EXAMPLES -->
+\end{DoxyVerb}
+ \hypertarget{md_mainpage_autotoc_md9}{}\doxysubsection{Usage}\label{md_mainpage_autotoc_md9}
+\begin{DoxyVerb}     * Hashcount is able to generate Hashtable from any file index requested
+     * If no input text is explicitly mentioned in argument a default text file in TEXTFILES/default.txt is used
+     * The User is able to choose different options
+     * Example:
+        ```sh
+           ./hashcount -f input.txt -rc
+              ```
+
+              <table style="width=110%" border="solid black">
+                  <tr ALIGN=LEFT>
+                          <th >OPTIONS</th>
+                                  <th>DESCRIPTION</th>
+                                      </tr>
+                                          <tr ALIGN=LEFT>
+                                                  <th>-f path_rel_to_bin/filename.txt</th>
+                                                          <th>For specifying an input file declare a file name after the -f option i.e. -f input.txt</th>
+                                                              </tr>
+                                                                  <tr ALIGN=LEFT>
+                                                                          <th>-r</th>
+                                                                                  <th>This removes all keywords from a textfile by a chosen bucket. This requires no arguments.</th>
+                                                                                      </tr>
+                                                                                          <tr ALIGN=LEFT>
+                                                                                                  <th>-c</th>
+                                                                                                          <th>This censores all words except chosen buckets. This requires no arguments</th>
+                                                                                                              </tr>
+                                                                                                              </table>
+
+                                                                                                              <hr>
+
+                                                                                                              <!-- USAGE EXAMPLES -->
+\end{DoxyVerb}
+ \hypertarget{md_mainpage_autotoc_md10}{}\doxysubsection{Example}\label{md_mainpage_autotoc_md10}
+\begin{DoxyVerb}                                                                                                              * These examples serve as illustrations how this application could be run
+                                                                                                              * For inputting indices for removing and censoring words spaces or comma could be used
+                                                                                                                 ```sh
+                                                                                                                    ./hashcount -f input.txt -rc
+                                                                                                                       ```
+
+                                                                                                                       \image html ./images/remove.png width=50% height=50% 
+                                                                                                                       \image html ./images/censor.png width=50% height=50%
+
+
+                                                                                                                       <hr>
+                                                                                                                       <br />
+                                                                                                                       <!-- CONTACT -->
+\end{DoxyVerb}
+ \hypertarget{md_mainpage_autotoc_md11}{}\doxysubsection{Contact}\label{md_mainpage_autotoc_md11}
+\begin{DoxyVerb}                                                                                                                       Author: John Bryan Valle
+                                                                                                                       Email: jbvalle.jv@gmail.com
+                                                                                                                       Date: 21.01.2022
+\end{DoxyVerb}
+ 

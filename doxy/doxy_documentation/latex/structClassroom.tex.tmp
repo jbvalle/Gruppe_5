@@ -1,0 +1,20 @@
+\hypertarget{structClassroom}{}\doxysection{Classroom Struct Reference}
+\label{structClassroom}\index{Classroom@{Classroom}}
+
+
+Collaboration diagram for Classroom\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structClassroom_a70104fb56d6860ab6f7c1caca483a4c3}\label{structClassroom_a70104fb56d6860ab6f7c1caca483a4c3}} 
+\mbox{\hyperlink{structStudent}{Student}} $\ast$ {\bfseries students}
+\item 
+\mbox{\Hypertarget{structClassroom_af2f476bcbb7297ff920abe528bf93cd9}\label{structClassroom_af2f476bcbb7297ff920abe528bf93cd9}} 
+int {\bfseries number\+\_\+of\+\_\+students}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jvalle/\+Coding/bic02/student\+\_\+seat\+\_\+system/inc/project\+\_\+function.\+h\end{DoxyCompactItemize}

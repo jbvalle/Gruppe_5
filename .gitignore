@@ -1,0 +1,7 @@
+#bin target
+test_exe
+
+#vim security files
+.*swp
+.*swo
+

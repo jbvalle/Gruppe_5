@@ -1,0 +1,119 @@
+
+* {
+    background-color: rgba(143, 156, 165, 0.85);
+    color: #000000;
+}
+
+label#indirect_neighbour_label {
+    color: red;
+}
+label#direct_neighbour_label {
+    color: green;
+}
+label#students_names_label {
+    color: #0b100a;
+    background-color: rgba(227, 229, 230, 0.83);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+#return_button{
+    background-color: rgba(124, 156, 179, 0.83);
+    color: black;
+    font-family: DejaVu Sans, cursive;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    border-radius: 10px;
+}
+#save_button{
+    background-color: rgba(124, 156, 179, 0.83);
+    color: black;
+    font-family: DejaVu Sans, cursive;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    border-radius: 10px;
+}
+#direct_indirect_button{
+    background-color: rgba(124, 156, 179, 0.83);
+    color: black;
+    font-family: DejaVu Sans, cursive;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 13px;
+    border-radius: 13px;
+    border: 1px solid;
+}
+#generate_button{
+    background-color: rgba(124, 156, 179, 0.83);
+    color: black;
+    font-family: DejaVu Sans, cursive;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid;
+    margin: 10px;
+    padding: 5px;
+}
+
+#entry{
+    border-width: 3px;
+    background-color: rgba(183, 195, 202, 0.83);
+    color: #000000;
+    border-color: #3f69a0;
+    border-style: groove;
+}
+#row_entry_input{
+    border-width: 3px;
+    background-color: rgba(183, 195, 202, 0.83);
+    color: #000000;
+    border-color: #3f78a0;
+    border-style: inset;
+}
+#col_entry_input{
+    border-width: 3px;
+    background-color: rgba(183, 195, 202, 0.83);
+    color: #000000;
+    border-color: #3f78a0;
+    border-style: inset;
+}
+#direct_indirect_entry{
+    border-width: 3px;
+    background-color: rgba(183, 195, 202, 0.83);
+    color: #000000;
+    border-color: #3f78a0;
+    border-style: inset;
+}
+
+#icon_png{
+    min-width:3px;
+    min-height:3px;
+    background-size: 5px 5px;
+    background-repeat: round;
+    background-position: inherit;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#alert_window{
+    background-color: rgb(180, 185, 206);
+    color: #954040;
+}
+
+#generate_button:hover{
+    background-color: black;
+}
+#return_button:hover{
+    background-color: black;
+}
+#save_button:hover{
+    background-color: black;
+}
+#direct_indirect_button:hover{
+    background-color: black;
+}
