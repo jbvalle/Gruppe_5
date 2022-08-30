@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprojectLib.a CMakeFiles/projectLib.dir/src/user_interface.c.o
+/usr/bin/ranlib libprojectLib.a

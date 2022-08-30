@@ -12,13 +12,15 @@ COVFLAGS=-r . --html --html-details
 
 COVPATH=./build/CMakeFiles/testRunner.dir/src/
 
+GTEST_PATH=./dependency/googletest
+
 TARGET:= testRunner
 
 all: clean build
 
 build: FORCE
-	mkdir -p $@ && $(CMAKE) -B./$(BUILD) && cd $(BUILD) && $(MAKE)
-
+	mkdir -p $@ && $(CMAKE) -B./$(BUILD) && cd $(BUILD) && $(MAKE) 
+	cd $(GTEST_PATH) && mkdir -p $(BUILD) && $(CMAKE) -B./$(BUILD) && cd $(BUILD) && $(MAKE) && sudo $(MAKE) install
 gcov: FORCE
 	cd $(COVPATH) && lcov --capture --directory . --output-file gtest_coverage.info && genhtml gtest_coverage.info --output-directory CODE_COVERAGE
 
