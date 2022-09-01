@@ -49,19 +49,21 @@
 
 ## Pre - Requisites for building program
 
-| Packages              |                                       Description |
-|-----------------------|--------------------------------------------------:|
-| buid-essential        |                              Used for build tools |
-| libpthread-stubs0-dev |                       PTHREAD Library used by GTK |
-| libgtk-3-dev          |                                      GTK3 Library |
-| libgtest-dev          |                           GoogleTesting Framework |
-| doxygen               |                            Used for Documentation |
-| gcovr                 |               Google Test Code Coverage Framework |
-| firefox               | Used to display coverage report and documentation |
+| Packages               |                                       Description |
+|------------------------|--------------------------------------------------:|
+| buid-essential         |                              Used for build tools |
+| libpthread-stubs0-dev  |                       PTHREAD Library used by GTK |
+| libgtk-3-dev           |                                      GTK3 Library |
+| libgtest-dev           |                           GoogleTesting Framework |
+| doxygen                |                            Used for Documentation |
+| gcovr                  |               Google Test Code Coverage Framework |
+| firefox                | Used to display coverage report and documentation |
+| pkg-config             |                    For handling GTK3 Dependencies |
+| gcc (VERSION <= 9.x.x) |                    For handling GTK3 Dependencies |
    
    
    ```sh
-   sudo apt install build-essential libpthread-stubs0-dev libgtk-3-dev libgtest-dev doxygen gcovr firefox
+   sudo apt install build-essential libpthread-stubs0-dev libgtk-3-dev libgtest-dev doxygen gcovr firefox pkg-config
    ```
    or
    

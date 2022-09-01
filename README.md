@@ -56,9 +56,11 @@
 | doxygen               |                            Used for Documentation |
 | gcovr                 |               Google Test Code Coverage Framework |
 | firefox               | Used to display coverage report and documentation |
+| pkg-config            |                    For handling GTK3 Dependencies |
+| gcc (VERSION <= 9.x.x) |                    For handling GTK3 Dependencies |
    
    ```sh
-   sudo apt install build-essential libpthread-stubs0-dev libgtk-3-dev libgtest-dev doxygen gcovr firefox
+   sudo apt install build-essential libpthread-stubs0-dev libgtk-3-dev libgtest-dev doxygen gcovr firefox pkg-config
    ```
    or
    
@@ -66,7 +68,20 @@
    make base-build 
    ```
    
+## Switching GCC (Only if gcc VERSION is higher than Ver.9.x.x)
+
+   ```sh
+   	sudo apt -y install gcc-9 g++-9 &&
+   	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9 &&
+   	sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 9 &&
+   	sudo update-alternatives --config gcc &&
+   	sudo update-alternatives --config g++
+   ```
+   or
    
+   ```sh
+   make switch_gcc
+   ```
    
 <!-- GETTING STARTED -->
 ## Getting Started
