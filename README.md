@@ -41,8 +41,8 @@
 ## Pattern generation
 ### 25% Coverage has been implemented using following algorithm
 
-<img src="./doxy/images/25cov_pattern.png" alt="alt text" width="300"/>
-<img src="./doxy/images/row_col_deter_25cov.png" alt="alt text" width="300"/>
+<img src="./doxy/images/25cov_pattern.png" alt="alt text" width="400"/>
+<img src="./doxy/images/row_col_deter_25cov.png" alt="alt text" width="400"/>
 <hr>
 
 ## Pre - Requisites for building program
