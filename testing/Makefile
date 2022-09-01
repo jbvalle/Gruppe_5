@@ -65,7 +65,7 @@ $(TARGET): $(OBJ_CXX) $(OBJ_C)
 #===========================#
 
 build:
-	cd $(GTEST_ROOT) && mkdir -p build && cd ./build && cmake .. && make
+	cd $(GTEST_ROOT) && mkdir -p build && cd ./build && cmake .. && make && sudo make install
 
 run:
 	./$(TARGET)
