@@ -6,7 +6,7 @@
 
 <div align="center">
 
-\image html ./doxy/images/logo.png width=20% height=20% 
+<img src="./doxy/images/logo.png" alt="alt text" width="200"/>
 
 <i>Requires GCC Version 9.x.y or below! This project generates a seat tracking system, which registers all people occupying a possible seat. Additionally a coverage system is applied for a customized distribution, and a neighbour tracking register is implemented for displaying all direct and indirect neighbours</i>
 <br />
