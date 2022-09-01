@@ -50,7 +50,7 @@ OBJ:=$(patsubst $(SRCS_DIR)/%.c, $(SRCS_DIR)/$(OBJ_DIR)/%.o, $(SRCS))
 
 TARGET_MAIN_PROG:=main
 
-all: $(CLEAN) $(OBJ) $(TARGET_MAIN_PROG)
+all: $(OBJ) $(TARGET_MAIN_PROG)
 
 #==========================#
 #== Compile Main Program ==#
