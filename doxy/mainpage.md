@@ -59,6 +59,7 @@
 | gcovr                 |               Google Test Code Coverage Framework |
 | firefox               | Used to display coverage report and documentation |
    
+   
    ```sh
    sudo apt install build-essential libpthread-stubs0-dev libgtk-3-dev libgtest-dev doxygen gcovr firefox
    ```
@@ -77,10 +78,10 @@
 
 To install Dependencies and build libraries
 
-| Build Target |                                                                                                                   Description |
-|--------------|------------------------------------------------------------------------------------------------------------------------------:|
-| make build   | This will generate the main binary of the main program as well as the googletest binaries from source in ./testing/googletest |
 
+| Build Target |                                              Description |
+|--------------|---------------------------------------------------------:|
+| make build   | This will build all necessary libraries and dependencies |
 <hr>
 
 <!-- USAGE EXAMPLES -->

@@ -75,9 +75,9 @@
 
 To install Dependencies and build libraries
 
-| Build Target |                                                                                                                   Description |
-|--------------|------------------------------------------------------------------------------------------------------------------------------:|
-| make build   | This will generate the main binary of the main program as well as the googletest binaries from source in ./testing/googletest |
+| Build Target |                                              Description |
+|--------------|---------------------------------------------------------:|
+| make build   | This will build all necessary libraries and dependencies |
 
 <hr>
 
