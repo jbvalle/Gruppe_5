@@ -1,50 +1,111 @@
-.PHONY= build gcov report test clean run doxy
+#============#
+#== MACROS ==#
+#============#
+DEBUG=0
+#==============#
+#== Binaries ==#
+#==============#
 
+CC=gcc
 CMAKE=cmake
-
-BUILD=./build
-
 COV=gcov
-
 COVR=gcovr
 
+#====================#
+#== Compiler FLAGS ==#
+#====================#
+
+GTK_FLAGS=-export-dynamic `pkg-config --libs --cflags gtk+-3.0`
 COVFLAGS=-r . --html --html-details
 
+ifeq ($(DEBUG),1)
+	CFLAGS=-fprofile-arcs -ftest-coverage -fPIC -lgcov --coverage -O0
+else
+	CFLAGS=-O3
+endif
+
+#===========#
+#== PATHS ==#
+#===========#
+
+BUILD=./build
 COVPATH=./build/CMakeFiles/testRunner.dir/src/
+TESTPATH=./testing
 
-GTEST_PATH=./dependency/googletest
+#=============================#
+#== Source and Object Files ==#
+#=============================#
 
-TARGET:= testRunner
+SRCS_DIR=src
+SRCS:=$(wildcard $(SRCS_DIR)/*.c)
 
-all: clean build
+OBJ_DIR=obj
+OBJ:=$(patsubst $(SRCS_DIR)/%.c, $(SRCS_DIR)/$(OBJ_DIR)/%.o, $(SRCS))
 
-build: FORCE
-	mkdir -p $@ && $(CMAKE) -B./$(BUILD) && cd $(BUILD) && $(MAKE) 
-	cd $(GTEST_PATH) && mkdir -p $(BUILD) && $(CMAKE) -B./$(BUILD) && cd $(BUILD) && $(MAKE) && sudo $(MAKE) install
+#==========================================================================#
+
+#===================#
+#== BUILD TARGETS ==#
+#===================#
+
+TARGET_MAIN_PROG:=main
+
+all: $(CLEAN) $(OBJ) $(TARGET_MAIN_PROG)
+
+#==========================#
+#== Compile Main Program ==#
+#==========================#
+
+$(SRCS_DIR)/$(OBJ_DIR)/%.o: $(SRCS_DIR)/%.c | mk_objdir
+	$(CC)  -c -o $@ $^ $(GTK_FLAGS) $(CFLAGS)
+
+$(TARGET_MAIN_PROG): $(OBJ)
+	$(CC) $(GCOV_C_FLAGS) -o $@ $^ $(GTK_FLAGS) $(CFLAGS) 
+
+run:
+	./$(TARGET_MAIN_PROG)
+
+gcov: FORCE
+	gcovr -r . --html -o code_coverage.html
+
+report: FORCE
+	firefox ./code_coverage.html
+
+doxy: FORCE
+	cd doxy && doxygen Doxyfile && cd doxy_documentation/html && firefox index.html
+
+mk_objdir:
+	mkdir -p $(SRCS_DIR)/$(OBJ_DIR)
+
+clean:
+	rm -rf $(SRCS_DIR)/$(OBJ_DIR) $(TARGET_MAIN_PROG) *.html *.gcda *.gcno
+	$(MAKE) -C $(TESTPATH) clean
+
+show:
+	@echo $(CFLAGS)
+
+#==========================#
+#== Install Dependencies ==#
+#==========================#
+
+build:
+	$(MAKE) -C $(TESTPATH) build
 
 base-build:
 	chmod +x ./main_system_build.sh
 	./main_system_build.sh
 
-gcov: FORCE
-	cd $(COVPATH) && lcov --capture --directory . --output-file gtest_coverage.info && genhtml gtest_coverage.info --output-directory CODE_COVERAGE
 
-report: FORCE
-	firefox ./$(COVPATH)/CODE_COVERAGE/index.html
-
+#===============================#
+#== Call Test Runner Makefile ==#
+#===============================#
 test: FORCE
-	cd $(BUILD) && ./$(TARGET)
-
-run: FORCE
-	./build/./gruppe_v
-
-doxy: FORCE
-	cd doxy && doxygen Doxyfile && cd doxy_documentation/html && firefox index.html
-
-
-clean: FORCE
-	rm -rf $(BUILD)
-	rm -rf $(GTEST_PATH)/$(BUILD)
-
+	$(MAKE) -C $(TESTPATH) DEBUG=1
+	$(MAKE) -C $(TESTPATH) run
+	
 FORCE:
 
+#===================#
+#== PHONY TARGETS ==#
+#===================#
+.PHONY=FORCE test base-build mk_objdir doxy report gcov build
